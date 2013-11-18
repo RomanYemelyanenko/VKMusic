@@ -11,13 +11,13 @@
         android:layout_height="match_parent" />
 
     <fragment android:id="@+id/navigation_drawer_left"
-        class="com.vkmusic.NavigationDrawerFragment"
+        class="com.vkmusic.AudioListDrawerFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="start"/>
 
     <fragment android:id="@+id/navigation_drawer_right"
-        class="com.vkmusic.NavigationDrawerFragment"
+        class="com.vkmusic.AudioSourcesDrawerFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="end"/>
