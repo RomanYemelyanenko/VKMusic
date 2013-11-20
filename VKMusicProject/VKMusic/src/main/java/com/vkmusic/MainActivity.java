@@ -5,12 +5,9 @@ import android.os.Bundle;
 
 public class MainActivity extends ActionBarActivity {
 
-    private  DrawerProvider _provider;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.layout_player);
-        _provider = new DrawerProvider(this);
+        setContentView(R.layout.drawer_main);
     }
 }

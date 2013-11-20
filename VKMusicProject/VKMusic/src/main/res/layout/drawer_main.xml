@@ -5,18 +5,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <FrameLayout
-        android:id="@+id/container"
+    <fragment android:id="@+id/player_fragment"
+        class="com.vkmusic.PlayerFragment"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"/>
 
-    <fragment android:id="@+id/navigation_drawer_left"
+    <fragment android:id="@+id/audio_list_fragment"
         class="com.vkmusic.AudioListDrawerFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="start"/>
 
-    <fragment android:id="@+id/navigation_drawer_right"
+    <fragment android:id="@+id/audio_source_list_fragments"
         class="com.vkmusic.AudioSourcesDrawerFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
