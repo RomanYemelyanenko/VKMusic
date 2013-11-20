@@ -18,7 +18,13 @@ public class UserProfileFragment extends Fragment {
         if(isLogined())
             return inflater.inflate(R.layout.layout_user_profile,null);
         else
-            return  inflater.inflate(R.layout.layout_login, null);
+        {
+            View view = inflater.inflate(R.layout.layout_login, null);
+            View selectedView = view.findViewById(R.id.login_button);
+            selectedView.setSelected(true);
+            return  view;
+        }
+
     }
 
 }

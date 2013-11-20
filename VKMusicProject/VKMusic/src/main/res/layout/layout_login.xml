@@ -14,7 +14,7 @@
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
             android:layout_weight="1"
-            android:background="@drawable/rounded_left_top_shape"
+            android:background="@drawable/empty_rounded_left_top_shape"
             android:hint="@string/id"/>
         <EditText style="@style/EditTextStyle"
             android:id="@+id/password"
@@ -24,7 +24,7 @@
             android:layout_marginTop="-1dp"
             android:hint="@string/password"
             android:password="true"
-            android:background="@drawable/rounden_left_bottom_shape"/>
+            android:background="@drawable/empty_rounded_left_bottom_shape"/>
     </LinearLayout>
     <Button style="@style/ButtonStyle"
         android:id="@+id/login_button"
@@ -34,7 +34,7 @@
         android:gravity="center"
         android:singleLine="true"
         android:layout_marginLeft="-1dp"
-        android:background="@drawable/rounded_right_shape"
+        android:background="@drawable/rounded_right_selector"
         android:text="@string/login"/>
 </LinearLayout>
 

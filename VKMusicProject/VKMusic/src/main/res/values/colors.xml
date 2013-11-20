@@ -4,4 +4,6 @@
     <color name="dark_green">#87b824</color>
     <color name="light_green">#addf45</color>
     <color name="transparent_gray">#aaaa</color>
+    <color name="transparent_white">#afff</color>
+    <color name="transparent_blue">#330276FD</color>
 </resources>
