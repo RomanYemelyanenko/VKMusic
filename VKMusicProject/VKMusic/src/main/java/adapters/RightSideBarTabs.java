@@ -5,6 +5,8 @@ import android.app.FragmentManager;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.vkmusic.EmptyFragment;
@@ -42,7 +44,13 @@ public class RightSideBarTabs implements ITabBuilder {
     {
         _context = context;
         _fragmentManager = fragmentManager;
-        _tabDescriptors = new TabDescriptor[]{ new TabDescriptor( "Плеер", EmptyFragment.class.getName()) };
+        _tabDescriptors = new TabDescriptor[]
+                {
+                        new TabDescriptor( "Плеер", EmptyFragment.class.getName()),
+                        new TabDescriptor( "Плеер", PlayerFragment.class.getName()),
+                        new TabDescriptor( "Плеер", PlayerFragment.class.getName()),
+                        new TabDescriptor( "Плеер", PlayerFragment.class.getName())
+                };
     }
 
     @Override
@@ -50,6 +58,9 @@ public class RightSideBarTabs implements ITabBuilder {
         LayoutInflater inflater = LayoutInflater.from(_context);
         TextView view = (TextView)inflater.inflate(R.layout.layout_tab, null);
         view.setText(_tabDescriptors[position].getTabText());
+        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT,LinearLayout.LayoutParams.MATCH_PARENT);
+        params.setMargins(0,0,15,0);
+        view.setLayoutParams(params);
         return view;
     }
 

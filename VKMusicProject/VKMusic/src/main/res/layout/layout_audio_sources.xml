@@ -15,16 +15,21 @@
     <views.TabView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/audio_source_list"
+        android:id="@+id/audio_source_tabs"
         android:orientation="vertical"
         app:tab_holder="@+id/tab_holder"
         app:content_holder="@+id/content_holder">
-        <HorizontalScrollView
-            android:id="@+id/tab_holder"
-            android:layout_height="60dp"
+        <HorizontalScrollView style="@style/RightSideMargin"
+            android:layout_height="80dp"
             android:layout_width="match_parent"
-            android:layout_weight="1"/>
-        <FrameLayout
+            android:layout_weight="1">
+            <LinearLayout
+                android:id="@+id/tab_holder"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"/>
+            </HorizontalScrollView>
+        <FrameLayout style="@style/RightSideMargin"
             android:id="@+id/content_holder"
             android:layout_height="match_parent"
             android:layout_width="match_parent"

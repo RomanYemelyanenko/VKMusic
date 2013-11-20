@@ -20,7 +20,6 @@ import com.vkmusic.R;
  */
 public class TabView extends LinearLayout
 {
-    final int indexKeyId = 50390;
     private int _tabsHolderId;
     private int _contentHolderId;
     private ITabBuilder _tabBuilder;
@@ -40,7 +39,7 @@ public class TabView extends LinearLayout
         _contentHolderId = a.getResourceId(R.styleable.TabView_content_holder, 0);
     }
 
-    public  void SetTabBuilder(ITabBuilder tabBuilder)
+    public  void setTabBuilder(ITabBuilder tabBuilder)
     {
         _tabBuilder = tabBuilder;
         for(int i = 0; i < tabBuilder.getCountOfTabs(); i++)
@@ -48,7 +47,7 @@ public class TabView extends LinearLayout
             ViewGroup tabsHolder = (ViewGroup)findViewById(_tabsHolderId);
 
             View tabView = tabBuilder.getTabView(i);
-            tabView.setTag(indexKeyId,(Integer)i);
+            tabView.setTag((Integer)i);
             tabView.setOnClickListener(
                     new OnClickListener()
             {
@@ -57,8 +56,8 @@ public class TabView extends LinearLayout
                 {
                     if(view == _currentView) return;
 
-                    int index = (Integer)view.getTag(indexKeyId);
-                    _currentView.setSelected(false);
+                    int index = (Integer)view.getTag();
+                    if(_currentView != null)  _currentView.setSelected(false);
                     view.setSelected(true);
                     _currentView = view;
 
