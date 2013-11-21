@@ -72,4 +72,13 @@ public class TabView extends LinearLayout
             if(i==0) tabView.performClick();
         }
     }
+
+    @Override
+    public void onDetachedFromWindow()
+    {
+        super.onDetachedFromWindow();
+        FragmentTransaction fm = _tabBuilder.getFragmentManager().beginTransaction();
+        if(_currentFragment != null) fm.remove(_currentFragment);
+        fm.commit();
+    }
 }

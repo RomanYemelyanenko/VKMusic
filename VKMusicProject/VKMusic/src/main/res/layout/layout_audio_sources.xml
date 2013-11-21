@@ -22,7 +22,8 @@
         <HorizontalScrollView style="@style/RightSideMargin"
             android:layout_height="80dp"
             android:layout_width="match_parent"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:scrollbars="none">
             <LinearLayout
                 android:id="@+id/tab_holder"
                 android:layout_height="match_parent"
