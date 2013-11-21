@@ -7,11 +7,11 @@ import android.view.View;
 import android.view.ViewGroup;
 
 /**
- * Created by Roman on 20.11.13.
+ * Created by Roman on 21.11.13.
  */
-public class PlayerFragment extends Fragment {
+public class EmptyFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.layout_player, null);
+        return inflater.inflate(R.layout.layout_login, null);
     }
 }
