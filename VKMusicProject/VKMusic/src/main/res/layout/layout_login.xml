@@ -33,7 +33,7 @@
         android:layout_weight="0"
         android:singleLine="true"
         android:layout_marginLeft="-2dp"
-        android:background="@drawable/rounded_right_shape"
+        android:background="@drawable/rounded_right_selector"
         android:text="@string/login"/>
 </LinearLayout>
 

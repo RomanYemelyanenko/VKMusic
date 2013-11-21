@@ -1,10 +1,12 @@
 package views;
 
-import android.app.Fragment;
-import android.app.FragmentManager;
-import android.app.FragmentTransaction;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.os.Parcelable;
+import android.support.v4.app.FragmentActivity;
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,6 +24,8 @@ public class TabView extends LinearLayout
 {
     private int _tabsHolderId;
     private int _contentHolderId;
+    private FragmentManager _fragmentManager;
+
     private ITabBuilder _tabBuilder;
 
     private View _currentView;
@@ -35,8 +39,16 @@ public class TabView extends LinearLayout
                 R.styleable.TabView,
                 0, 0);
 
+        _fragmentManager = ((FragmentActivity)context).getSupportFragmentManager();
+
         _tabsHolderId = a.getResourceId(R.styleable.TabView_tab_holder, 0);
         _contentHolderId = a.getResourceId(R.styleable.TabView_content_holder, 0);
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Parcelable state) {
+
+        super.onRestoreInstanceState(state);
     }
 
     public  void setTabBuilder(ITabBuilder tabBuilder)
@@ -61,7 +73,7 @@ public class TabView extends LinearLayout
                     view.setSelected(true);
                     _currentView = view;
 
-                    FragmentTransaction fm = _tabBuilder.getFragmentManager().beginTransaction();
+                    FragmentTransaction fm = _fragmentManager.beginTransaction();
                     if(_currentFragment != null) fm.remove(_currentFragment);
                     _currentFragment = _tabBuilder.getTabFragment(index);
                     fm.add(_contentHolderId,_currentFragment);
@@ -71,14 +83,5 @@ public class TabView extends LinearLayout
             tabsHolder.addView(tabView);
             if(i==0) tabView.performClick();
         }
-    }
-
-    @Override
-    public void onDetachedFromWindow()
-    {
-        super.onDetachedFromWindow();
-        FragmentTransaction fm = _tabBuilder.getFragmentManager().beginTransaction();
-        if(_currentFragment != null) fm.remove(_currentFragment);
-        fm.commit();
     }
 }

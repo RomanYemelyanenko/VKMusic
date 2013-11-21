@@ -1,7 +1,7 @@
 package adapters;
 
-import android.app.Fragment;
-import android.app.FragmentManager;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -77,10 +77,5 @@ public class RightSideBarTabs implements ITabBuilder {
     @Override
     public int getCountOfTabs() {
         return _tabDescriptors.length;
-    }
-
-    @Override
-    public FragmentManager getFragmentManager() {
-        return _fragmentManager;
     }
 }

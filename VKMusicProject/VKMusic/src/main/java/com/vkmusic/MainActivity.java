@@ -1,11 +1,13 @@
 package com.vkmusic;
 
+import android.app.FragmentManager;
+import android.support.v4.app.FragmentActivity;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Gravity;
 
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends FragmentActivity {
     private DrawerLayout _drawer;
     @Override
     protected void onCreate(Bundle savedInstanceState) {

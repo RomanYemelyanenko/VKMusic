@@ -1,7 +1,7 @@
 package views;
 
-import android.app.Fragment;
-import android.app.FragmentManager;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.view.View;
 
 /**
@@ -12,5 +12,5 @@ public interface ITabBuilder {
     Fragment getTabFragment(int position);
 
     int getCountOfTabs();
-    FragmentManager getFragmentManager();
+
 }

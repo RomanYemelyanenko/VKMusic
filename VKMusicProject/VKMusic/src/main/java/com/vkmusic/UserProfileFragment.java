@@ -21,7 +21,6 @@ public class UserProfileFragment extends Fragment {
         {
             View view = inflater.inflate(R.layout.layout_login, null);
             View selectedView = view.findViewById(R.id.login_button);
-            selectedView.setSelected(true);
             return  view;
         }
 
