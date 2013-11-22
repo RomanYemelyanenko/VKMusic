@@ -46,7 +46,7 @@ public class RightSideBarTabs implements ITabBuilder {
         _fragmentManager = fragmentManager;
         _tabDescriptors = new TabDescriptor[]
                 {
-                        new TabDescriptor( "Плеер", EmptyFragment.class.getName()),
+                        new TabDescriptor( "Плеер", PlayerFragment.class.getName()),
                         new TabDescriptor( "Плеер", PlayerFragment.class.getName()),
                         new TabDescriptor( "Плеер", PlayerFragment.class.getName()),
                         new TabDescriptor( "Плеер", PlayerFragment.class.getName())

@@ -1,28 +1,44 @@
 buildscript {
-    repositories {
+    
+	repositories {
         mavenCentral()
     }
-    dependencies {
+    
+	dependencies {
         classpath 'com.android.tools.build:gradle:0.6.+'
     }
+
 }
+
+
 apply plugin: 'android'
+
+
 
 repositories {
     mavenCentral()
 }
 
+
+
 android {
     compileSdkVersion 19
     buildToolsVersion "19.0.0"
 
-    defaultConfig {
+    
+	defaultConfig {
         minSdkVersion 9
         targetSdkVersion 19
     }
+
 }
 
+
 dependencies {
-	compile 'com.android.support:support-v4:19.0.0'
-	compile 'com.android.support:appcompat-v7:19.0.0'
+
+//compile 'com.android.support:appcompat-v7:19.0.0'
+
+    compile 'com.actionbarsherlock:actionbarsherlock:4.4.0@aar'
+    compile 'com.android.support:support-v4:18.0.+'
+
 }

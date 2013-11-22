@@ -5,13 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
-    <fragment android:id="@+id/user_profile_fragment"
+    <fragment style="@style/TopBottomMargin" android:id="@+id/user_profile_fragment"
         class="com.vkmusic.UserProfileFragment"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="5dp"
-        android:layout_marginRight="5dp"/>
+       />
     <views.TabView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -19,7 +17,7 @@
         android:orientation="vertical"
         app:tab_holder="@+id/tab_holder"
         app:content_holder="@+id/content_holder">
-        <HorizontalScrollView style="@style/RightSideMargin"
+        <HorizontalScrollView style="@style/TopBottomMargin"
             android:layout_height="80dp"
             android:layout_width="match_parent"
             android:layout_weight="1"
@@ -30,7 +28,7 @@
                 android:layout_width="match_parent"
                 android:orientation="horizontal"/>
             </HorizontalScrollView>
-        <FrameLayout style="@style/RightSideMargin"
+        <FrameLayout style="@style/TopBottomMargin"
             android:id="@+id/content_holder"
             android:layout_height="match_parent"
             android:layout_width="match_parent"

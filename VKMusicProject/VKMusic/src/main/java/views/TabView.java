@@ -72,11 +72,12 @@ public class TabView extends LinearLayout
                     if(_currentView != null)  _currentView.setSelected(false);
                     view.setSelected(true);
                     _currentView = view;
+                    Fragment newFragment = _tabBuilder.getTabFragment(index);
 
                     FragmentTransaction fm = _fragmentManager.beginTransaction();
-                    if(_currentFragment != null) fm.remove(_currentFragment);
-                    _currentFragment = _tabBuilder.getTabFragment(index);
-                    fm.add(_contentHolderId,_currentFragment);
+                    fm.setCustomAnimations(R.anim.come_set,R.anim.out_set,R.anim.come_set,R.anim.out_set );
+                    fm.replace(_contentHolderId, newFragment);
+
                     fm.commit();
                 }
             });
